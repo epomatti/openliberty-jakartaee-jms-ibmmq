@@ -4,8 +4,6 @@ A sample application that uses Open Liberty to connect to IBM MQ to enqueue & de
 
 <img src="./docs/working.png"/>
 
-You'll need to setup the infrasctructure to make it work. Follow this setup:
-
 # Setup
 
 Here are the versions used to build this application at the time, but feel free to use the one that reflects your environment.
@@ -67,7 +65,7 @@ From **"/liberty"** directory in this repository structure, copy `server.xml` an
 
 Finally, deploy the application to Liberty and enqueue a message by the following URL:
 
-http://localhost:9080/libertymq/api/enqueue?msg=<message text>
+http://localhost:9080/libertymq/api/enqueue?msg=somemessage
 
 You should be able to see the enqueue confirmation in the browser, and the dequeue in the console.
 
