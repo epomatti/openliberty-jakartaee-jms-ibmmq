@@ -1,8 +1,10 @@
 # Open Liberty - JMS & IBM MQ
 
-This is a sample application that uses Open Liberty to connect to IBM to send and receive messages with JMS.
+A sample application that uses Open Liberty to connect to IBM MQ to enqueue & dequeue messages with JMS.
 
-You'll need to setup the infrasctructure to make it work. 
+<img src="./docs/working.png"/>
+
+You'll need to setup the infrasctructure to make it work. Follow this setup:
 
 # Setup
 
@@ -41,7 +43,7 @@ Download Eclipse and install IBM Liberty Developer tools: https://marketplace.ec
 
 1. Download Open Liberty: https://openliberty.io/downloads
 2. Unzip it
-3. Add Open Liberty to your Eclipse and create a New Server (you can choose the default server for now)
+3. Add Open Liberty to your Eclipse and create a New Server (you can choose the default server template for now)
 
 ## 5) Download MQ Resource Adapter
 
@@ -56,7 +58,7 @@ Copy it to Liberty config directory, that is the user server root, like this:
 
 ## 6) Configure Liberty Server
 
-From **/liberty** directory in this repository structure, copy `server.xml` and `jvm.options` to Liberty configuration directory:
+From **"/liberty"** directory in this repository structure, copy `server.xml` and `jvm.options` to Liberty configuration directory:
 
 `wlp/usr/servers/defaultServer/`
 
@@ -65,7 +67,7 @@ From **/liberty** directory in this repository structure, copy `server.xml` and 
 
 Finally, deploy the application to Liberty and enqueue a message by the following URL:
 
-http://localhost:9080/libertymq/api/enqueue
+http://localhost:9080/libertymq/api/enqueue?msg=<message text>
 
 You should be able to see the enqueue confirmation in the browser, and the dequeue in the console.
 

@@ -17,8 +17,8 @@ public class SampleProducer {
 	@Resource(lookup = "jms/queue1")
 	Queue queue;
 
-	public void sendMessage() throws Exception {
-		context.createProducer().send(queue, "my message");
+	public void sendMessage(String message) throws Exception {
+		context.createProducer().send(queue, message);
 		System.out.println("Message enqueued.");
 	}
 

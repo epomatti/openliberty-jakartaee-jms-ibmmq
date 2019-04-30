@@ -10,7 +10,7 @@ public class SampleListener implements MessageListener {
 
 	public void onMessage(Message message) {
 		try {
-			System.out.println("Message: " + message.getBody(String.class));
+			System.out.println("MDB received: " + message.getBody(String.class));
 		} catch (JMSException e) {
 			throw new RuntimeException(e);
 		}
