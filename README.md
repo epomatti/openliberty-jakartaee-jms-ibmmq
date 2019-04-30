@@ -54,7 +54,7 @@ Copy it to Liberty config directory, that is the user server root, like this:
 `wlp/usr/servers/defaultServer/wmq.jmsra.rar`
 
 
-## 6) Configure Liberty Server Config
+## 6) Configure Liberty Server
 
 From **/liberty** directory in this repository structure, copy `server.xml` and `jvm.options` to Liberty configuration directory:
 
