@@ -6,8 +6,6 @@ You'll need to setup the infrasctructure to make it work.
 
 # Setup
 
-
-
 Here are the versions used to build this application at the time, but feel free to use the one that reflects your environment.
 
 * Open Liberty 19.0.0.4
@@ -16,6 +14,8 @@ Here are the versions used to build this application at the time, but feel free 
 * IBM MQ 9.1.0.0 (Trial)
 * Windows 10
 * Eclipse 2019-03 (4.11.0)
+
+Use the following steps to run this example:
 
 ## 1) Install IBM MQ
 
@@ -68,3 +68,5 @@ Finally, deploy the application to Liberty and enqueue a message by the followin
 http://localhost:9080/libertymq/api/enqueue
 
 You should be able to see the enqueue confirmation in the browser, and the dequeue in the console.
+
+
