@@ -5,25 +5,33 @@
 		<feature>jms-2.0</feature>
 		<feature>mdb-3.2</feature>
 		<feature>localConnector-1.0</feature>
-        <feature>jaxrs-2.1</feature>
-        <feature>cdi-2.0</feature>
-    </featureManager>
-    
-    <resourceAdapter id="wmqjmsra" location="${server.config.dir}/wmq.jmsra.rar"/>
-	
-	<jmsConnectionFactory connectionManagerRef="ConMgr6" jndiName="jms/wmqCF">
-		<properties.wmqjmsra channel="DEV.APP.SVRCONN" hostName="localhost" password="changeit" port="1414" queueManager="QM1" transportType="CLIENT" userName="app"/>
+		<feature>jaxrs-2.1</feature>
+		<feature>cdi-2.0</feature>
+	</featureManager>
+
+	<resourceAdapter id="wmqjmsra"
+		location="${server.config.dir}/wmq.jmsra.rar" />
+
+	<jmsConnectionFactory
+		connectionManagerRef="ConMgr6" jndiName="jms/wmqCF">
+		<properties.wmqjmsra channel="DEV.APP.SVRCONN"
+			hostName="localhost" password="changeit" port="1414"
+			queueManager="QM1" transportType="CLIENT" userName="app" />
 	</jmsConnectionFactory>
-	<connectionManager id="ConMgr6" maxPoolSize="2"/>
+	<connectionManager id="ConMgr6" maxPoolSize="2" />
 
 	<jmsActivationSpec id="libertymq/SampleListenerMDB">
-		<properties.wmqjmsra channel="DEV.APP.SVRCONN" destinationRef="jms/queue1" destinationType="javax.jms.Queue" hostName="localhost" password="changeit" port="1414" queueManager="QM1" transportType="CLIENT" userName="app"/>
+		<properties.wmqjmsra channel="DEV.APP.SVRCONN"
+			destinationRef="jms/queue1" destinationType="javax.jms.Queue"
+			hostName="localhost" password="changeit" port="1414"
+			queueManager="QM1" transportType="CLIENT" userName="app" />
 	</jmsActivationSpec>
 
 	<jmsQueue id="jms/queue1" jndiName="jms/queue1">
-		<properties.wmqjmsra baseQueueManagerName="QM1" baseQueueName="DEV.QUEUE.1"/>
+		<properties.wmqjmsra baseQueueManagerName="QM1"
+			baseQueueName="DEV.QUEUE.1" />
 	</jmsQueue>
 
-	<applicationManager autoExpand="true"/>
-    <applicationMonitor updateTrigger="mbean"/>
+	<applicationManager autoExpand="true" />
+	<applicationMonitor updateTrigger="mbean" />
 </server>

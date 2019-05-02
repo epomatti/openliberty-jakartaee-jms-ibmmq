@@ -56,10 +56,13 @@ Copy it to Liberty config directory, that is the user server root, like this:
 
 ## 6) Configure Liberty Server
 
-From **"/liberty"** directory in this repository structure, copy `server.xml` and `jvm.options` to Liberty configuration directory:
+From [/liberty](/liberty) directory in this repository structure, copy `server.xml` and `jvm.options` to Liberty configuration directory:
 
 `wlp/usr/servers/defaultServer/`
 
+The key part of this example is the `server.xml`, with resource declaration, enqueue connection factory and the activation of the MDB for dequeue with JMS.
+
+<img src="./docs/serverxml.png"/>
 
 ## 7) Run and test the application
 
