@@ -72,15 +72,16 @@ http://localhost:9080/libertymq/api/enqueue?msg=somemessage
 
 You should be able to see the enqueue confirmation in the browser, and the dequeue in the console.
 
-### References
+### Sources
 
 Links to resources that helped me solve the configuration:
 
-- https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/twlp_dep_msg_mdbwmq.html
-- https://www.ibm.com/support/knowledgecenter/en/SSFKSJ_9.1.0/com.ibm.mq.dev.doc/q120040_.htm
-- https://www.ibm.com/support/knowledgecenter/en/SSGMCP_5.3.0/com.ibm.cics.ts.java.doc/topics/dfhpj_webspheremq_jmsliberty_configure.html
-- https://rieckpil.de/howto-simple-jms-application-with-the-embedded-messaging-engine-in-open-liberty/
-- http://blog.patrikvarga.com/2012/11/ibm-mq-object-authorization-for-jms.html
-- https://developer.ibm.com/messaging/learn-mq/mq-tutorials/develop-mq-jms/
-- https://developer.ibm.com/messaging/learn-mq/mq-tutorials/
-- https://developer.ibm.com/messaging/learn-mq/mq-tutorials/mq-connect-to-queue-manager/#win
+```
+https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/twlp_dep_msg_mdbwmq.html
+https://www.ibm.com/support/knowledgecenter/en/SSFKSJ_9.1.0/com.ibm.mq.dev.doc/q120040_.htm
+https://www.ibm.com/support/knowledgecenter/en/SSGMCP_5.3.0/com.ibm.cics.ts.java.doc/topics/dfhpj_webspheremq_jmsliberty_configure.html
+https://rieckpil.de/howto-simple-jms-application-with-the-embedded-messaging-engine-in-open-liberty/
+http://blog.patrikvarga.com/2012/11/ibm-mq-object-authorization-for-jms.html
+https://developer.ibm.com/messaging/learn-mq/mq-tutorials/develop-mq-jms/
+https://developer.ibm.com/messaging/learn-mq/mq-tutorials/ https://developer.ibm.com/messaging/learn-mq/mq-tutorials/mq-connect-to-queue-manager/#win
+```
