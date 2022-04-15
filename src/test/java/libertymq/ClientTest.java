@@ -3,7 +3,6 @@ package libertymq;
 import javax.jms.Destination;
 import javax.jms.JMSConsumer;
 import javax.jms.JMSContext;
-import javax.jms.Message;
 
 import com.ibm.msg.client.jms.JmsConnectionFactory;
 import com.ibm.msg.client.jms.JmsFactoryFactory;
