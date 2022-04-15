@@ -2,7 +2,47 @@
 
 A sample application that uses Open Liberty to connect to IBM MQ to enqueue & dequeue messages with JMS.
 
-<img src="./docs/working.png"/>
+## Running it
+
+## Development Environment
+
+### JDK
+
+This example uses JDK17.
+
+I chose [Temurim](https://adoptium.net/installation/linux) distribution, but you can use another one.
+
+```
+$ java --version
+openjdk 17.0.2 2022-01-18
+OpenJDK Runtime Environment Temurin-17.0.2+8 (build 17.0.2+8)
+OpenJDK 64-Bit Server VM Temurin-17.0.2+8 (build 17.0.2+8, mixed mode, sharing)
+```
+
+### IBM MQ
+
+Get the latest image from IBM Container Registry:
+
+```sh
+docker pull icr.io/ibm-messaging/mq:latest
+```
+
+Run it:
+
+```sh
+
+```
+
+
+
+### ...
+## ...
+## ...
+## ...
+## ...
+## ...
+## ...
+## ...
 
 ### Setup
 
