@@ -8,6 +8,11 @@ A sample application that uses Open Liberty to connect to IBM MQ to enqueue & de
 mvn liberty:dev
 ```
 
+```sh
+curl http://localhost:9080/libertymq/api/enqueue?msg=test
+```
+
+
 ## Development Environment
 
 ### JDK
@@ -54,6 +59,16 @@ docker run \
   --name QM1 icr.io/ibm-messaging/mq:latest
 ```
 
+### IBM MQ JMS Adapter
+
+https://www.ibm.com/support/pages/node/489235
+
+https://www.ibm.com/support/fixcentral/
+
+
+## Sources
+
+https://www.ibm.com/docs/en/was-liberty/nd?topic=dmal-deploying-jms-applications-liberty-use-mq-messaging-provider
 
 
 ### ...
