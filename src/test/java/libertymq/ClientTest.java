@@ -3,6 +3,8 @@ package libertymq;
 import javax.jms.Destination;
 import javax.jms.JMSConsumer;
 import javax.jms.JMSContext;
+import javax.jms.JMSProducer;
+import javax.jms.TextMessage;
 
 import com.ibm.msg.client.jms.JmsConnectionFactory;
 import com.ibm.msg.client.jms.JmsFactoryFactory;
@@ -13,16 +15,11 @@ import org.junit.jupiter.api.Test;
 public class ClientTest {
 
 	@Test
-	public void dequeue() throws Exception {
-
-		JMSContext context = null;
-		Destination destination = null;
-		JMSConsumer consumer = null;
+	public void jmsPutGet() throws Exception {
 
 		JmsFactoryFactory ff = JmsFactoryFactory.getInstance(WMQConstants.WMQ_PROVIDER);
 		JmsConnectionFactory cf = ff.createConnectionFactory();
 
-		// Set the properties
 		cf.setStringProperty(WMQConstants.WMQ_HOST_NAME, "localhost");
 		cf.setIntProperty(WMQConstants.WMQ_PORT, 1414);
 		cf.setStringProperty(WMQConstants.WMQ_CHANNEL, "DEV.APP.SVRCONN");
@@ -33,16 +30,19 @@ public class ClientTest {
 		cf.setStringProperty(WMQConstants.USERID, "app");
 		cf.setStringProperty(WMQConstants.PASSWORD, "passw0rd");
 
-		// Create JMS objects
-		context = cf.createContext();
-		destination = context.createQueue("queue:///DEV.QUEUE.1");
+		try (JMSContext context = cf.createContext()) {
+			Destination destination = context.createQueue("queue:///DEV.QUEUE.1");
 
-		consumer = context.createConsumer(destination);
-		String body = consumer.receiveBody(String.class);
-		// String body = consumer.receiveBodyNoWait(String.class);
+			TextMessage message = context.createTextMessage("XXX MESSAGE");
 
-		System.out.println("Message body: %s".formatted(body));
+			JMSProducer producer = context.createProducer();
+			producer.send(destination, message);
 
+			JMSConsumer consumer = context.createConsumer(destination);
+			String body = consumer.receiveBody(String.class, 5000);
+
+			System.out.println("Message body: %s".formatted(body));
+		}
 	}
 
 }

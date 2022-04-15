@@ -68,8 +68,9 @@ https://www.ibm.com/support/fixcentral/
 
 ## Sources
 
+https://developer.ibm.com/tutorials/mq-connect-app-queue-manager-containers/
 https://www.ibm.com/docs/en/was-liberty/nd?topic=dmal-deploying-jms-applications-liberty-use-mq-messaging-provider
-
+https://developer.ibm.com/tutorials/mq-develop-mq-jms/
 
 ### ...
 ## ...

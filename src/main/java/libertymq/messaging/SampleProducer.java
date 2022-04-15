@@ -6,7 +6,6 @@ import javax.inject.Inject;
 import javax.jms.JMSConnectionFactory;
 import javax.jms.JMSContext;
 import javax.jms.Queue;
-// import javax.resource.spi.ResourceAdapter;
 
 @Stateless
 public class SampleProducer {
