@@ -4,13 +4,17 @@ A sample application that uses Open Liberty to connect to IBM MQ to enqueue & de
 
 ## Running it
 
+```sh
+mvn liberty:dev
+```
+
 ## Development Environment
 
 ### JDK
 
 This example uses JDK17.
 
-I chose [Temurim](https://adoptium.net/installation/linux) distribution, but you can use another one.
+I picked [Temurim](https://adoptium.net/installation/linux) distribution but you can use another one.
 
 ```
 $ java --version
@@ -18,6 +22,13 @@ openjdk 17.0.2 2022-01-18
 OpenJDK Runtime Environment Temurin-17.0.2+8 (build 17.0.2+8)
 OpenJDK 64-Bit Server VM Temurin-17.0.2+8 (build 17.0.2+8, mixed mode, sharing)
 ```
+### Maven
+
+Download and install the most recent Maven release available to work with JDK 17.
+
+https://maven.apache.org/install.html
+
+source /etc/profile.d/maven.sh
 
 ### IBM MQ
 
