@@ -29,7 +29,7 @@ docker run --env LICENSE=accept \
 ```
 _As of today IBM won't maintain images in Docker Hub anymore (>=9.2.5.0)_
 
-Install the dependencies and start OpenLibery:
+Install the dependencies and start OpenLiberty:
 
 ```sh
 mvn install
