@@ -11,7 +11,7 @@
     <variable name="ibmmq.username" value="app"/>
     <variable name="ibmmq.password" value="passw0rd"/>
 
-    <resourceAdapter id="wmqjmsra" location="${wlp.install.dir}/../../ibm/wmq.jmsra.rar" />
+    <resourceAdapter id="wmqjmsra" location="${wlp.install.dir}../../../ibm/wmq.jmsra.rar" />
 
     <jmsConnectionFactory jndiName="jms/wmqCF" connectionManagerRef="ConMgr6">
         <properties.wmqjmsra
