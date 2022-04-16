@@ -5,40 +5,47 @@
         <feature>javaee-8.0</feature>
     </featureManager>
 
-    <resourceAdapter id="wmqjmsra" location="/tmp/wmq.jmsra.rar" />
+    <!-- START JMS CONFIGURATION -->
+
+    <!-- Real projects should make it secure -->
+    <variable name="ibmmq.username" value="app"/>
+    <variable name="ibmmq.password" value="passw0rd"/>
+
+    <resourceAdapter id="wmqjmsra" location="${wlp.install.dir}/../../ibm/wmq.jmsra.rar" />
 
     <jmsConnectionFactory jndiName="jms/wmqCF" connectionManagerRef="ConMgr6">
         <properties.wmqjmsra
             channel="DEV.APP.SVRCONN"
             hostName="localhost"
-            password="passw0rd"
             port="1414"
+            userName="${ibmmq.username}"
+            password="${ibmmq.password}"
             queueManager="QM1"
             transportType="CLIENT"
-            userName="app" />
+        />
     </jmsConnectionFactory>
 
-
-    <connectionManager id="ConMgr6" maxPoolSize="2"/>
+    <connectionManager id="ConMgr6" maxPoolSize="10"/>
 
     <jmsActivationSpec id="libertymq/SampleListenerMDB">
         <properties.wmqjmsra
             channel="DEV.APP.SVRCONN"
-            destinationRef="jms/queue1"
-            destinationType="javax.jms.Queue"
             hostName="localhost"
-            password="passw0rd"
             port="1414"
+            userName="${ibmmq.username}"
+            password="${ibmmq.password}"
             queueManager="QM1"
             transportType="CLIENT"
-            userName="app" />
+            destinationRef="jms/queue1"
+            destinationType="javax.jms.Queue"
+        />
 	</jmsActivationSpec>
 
-    <jmsQueue id="jms/queue1" jndiName="jms/wmqQ1">
-        <properties.wmqjmsra 
-            baseQueueName="DEV.QUEUE.1" 
-            baseQueueManagerName="QM1"/>
+    <jmsQueue id="jms/queue1" jndiName="jms/queue1">
+        <properties.wmqjmsra baseQueueName="DEV.QUEUE.1" />
     </jmsQueue>
+
+    <!-- END JMS CONFIGURATION -->
 
 
     <basicRegistry id="basic" realm="BasicRealm" />
