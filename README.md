@@ -8,7 +8,7 @@ A sample application that uses Open Liberty to connect to IBM MQ to enqueue & de
 
 You'll need to install these requirements:
 
-- JDK 17 - [Temurim](https://adoptium.net/installation/linux) is a good distro
+- JDK 17 - E.g. [Temurim](https://adoptium.net/installation/linux)
 - Latest Maven, it must be Java 17 compatible - https://maven.apache.org/install.html
 - Docker to run IBM MQ
 
