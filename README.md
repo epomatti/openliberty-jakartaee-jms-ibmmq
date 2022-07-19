@@ -4,7 +4,7 @@
 
 A sample application that uses Open Liberty to connect to IBM MQ to enqueue & dequeue messages.
 
->ℹ️ Updated to use Jakarta 9.1 and IMB MQ 9.3
+>ℹ️ Updated to use Jakarta 9.1 and IBM MQ 9.3
 
 ## Setup
 
