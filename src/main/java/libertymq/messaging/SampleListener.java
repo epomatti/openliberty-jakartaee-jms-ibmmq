@@ -1,9 +1,9 @@
 package libertymq.messaging;
 
-import javax.ejb.MessageDriven;
-import javax.jms.JMSException;
-import javax.jms.Message;
-import javax.jms.MessageListener;
+import jakarta.ejb.MessageDriven;
+import jakarta.jms.JMSException;
+import jakarta.jms.Message;
+import jakarta.jms.MessageListener;
 
 @MessageDriven(name = "SampleListenerMDB")
 public class SampleListener implements MessageListener {
