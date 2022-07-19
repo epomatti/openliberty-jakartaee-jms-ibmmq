@@ -2,7 +2,7 @@
 <server description="new server">
 
     <featureManager>
-        <feature>javaee-8.0</feature>
+        <feature>jakartaee-9.1</feature>
     </featureManager>
 
     <!-- START JMS CONFIGURATION -->
@@ -11,7 +11,7 @@
     <variable name="ibmmq.username" value="app"/>
     <variable name="ibmmq.password" value="passw0rd"/>
 
-    <resourceAdapter id="wmqjmsra" location="${wlp.install.dir}../../../ibm/wmq.jmsra.rar" />
+    <resourceAdapter id="wmqjmsra" location="${wlp.install.dir}../../../ibm/wmq.jakarta.jmsra.rar" />
 
     <jmsConnectionFactory jndiName="jms/wmqCF" connectionManagerRef="ConMgr6">
         <properties.wmqjmsra
@@ -37,7 +37,7 @@
             queueManager="QM1"
             transportType="CLIENT"
             destinationRef="jms/queue1"
-            destinationType="javax.jms.Queue"
+            destinationType="jakarta.jms.Queue"
         />
 	</jmsActivationSpec>
 
