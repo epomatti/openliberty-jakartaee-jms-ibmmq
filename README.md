@@ -4,7 +4,7 @@
 
 A sample application that uses Open Liberty to connect to IBM MQ to enqueue & dequeue messages.
 
->ℹ️ Updated to use Jakarta 9.1 and IBM MQ 9.3
+> Updated to use Jakarta 9.1 and IBM MQ 9.3
 
 ## Setup
 
@@ -28,7 +28,7 @@ docker run --env LICENSE=accept \
   --env MQ_APP_PASSWORD=passw0rd \
   --name QM1 icr.io/ibm-messaging/mq:latest
 ```
-> _ℹ️ Since 9.2.5.0 new MQ images will be published to IBM's registry._
+> _Since 9.2.5.0 new MQ images will be published to IBM's registry._
 
 Install the dependencies and start OpenLiberty:
 
