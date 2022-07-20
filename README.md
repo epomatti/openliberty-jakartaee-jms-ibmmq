@@ -45,7 +45,7 @@ curl -X POST -d 'msg=test message' http://localhost:9080/libertymq/api/enqueue
 
 ## Versions
 
-Implementation / tests performed with the latest versions of all components:
+Implementation / tests performed with the latest/LTS versions of all components:
 
 - openjdk 17.0.3 2022-04-19
 - Jakarta EE 9.1
