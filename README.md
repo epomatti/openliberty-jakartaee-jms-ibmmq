@@ -1,6 +1,7 @@
 # Open Liberty - JMS & IBM MQ
 
-[![Maven](https://img.shields.io/github/workflow/status/epomatti/openliberty-jms-mq-example/maven.yml)](https://github.com/epomatti/openliberty-jms-mq-example/actions/workflows/maven.yml)
+[![Maven](https://img.shields.io/github/actions/workflow/status/epomatti/openliberty-jms-mq-example/maven.yml)](https://github.com/epomatti/openliberty-jms-mq-example/actions/workflows/maven.yml)
+          
 
 A sample application that uses Open Liberty to connect to IBM MQ to enqueue & dequeue messages.
 
