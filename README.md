@@ -1,23 +1,21 @@
 # Open Liberty - JMS & IBM MQ
 
-[![Maven](https://img.shields.io/github/actions/workflow/status/epomatti/openliberty-jms-mq-example/maven.yml)](https://github.com/epomatti/openliberty-jms-mq-example/actions/workflows/maven.yml)
-          
-
 A sample application that uses Open Liberty to connect to IBM MQ to enqueue & dequeue messages.
-
-> Updated to use Jakarta 9.1 and IBM MQ 9.3
 
 ## Setup
 
 For this project you'll need to install the following requirements:
 
-- JDK 17 (or later) - E.g. [Temurim](https://adoptium.net/installation/linux)
-- Latest Maven, it must be Java 17 compatible - https://maven.apache.org/install.html
+- JDK 21
+- Maven
 - Docker
 
 ## Running it
 
 Pull and start the IBM MQ docker container:
+
+> [!TIP]
+> Since 9.2.5.0 new MQ images will be published to IBM's registry
 
 ```sh
 docker pull icr.io/ibm-messaging/mq:latest
@@ -29,7 +27,6 @@ docker run --env LICENSE=accept \
   --env MQ_APP_PASSWORD=passw0rd \
   --name QM1 icr.io/ibm-messaging/mq:latest
 ```
-> _Since 9.2.5.0 new MQ images will be published to IBM's registry._
 
 Install the dependencies and start OpenLiberty:
 
@@ -48,13 +45,13 @@ curl -X POST -d 'msg=test message' http://localhost:9080/libertymq/api/enqueue
 
 Implementation / tests performed with the latest/LTS versions of all components:
 
-- openjdk 17.0.3 2022-04-19
-- Jakarta EE 9.1
-- Apache Maven 3.8.6
-- OpenLibery 22.0.0.7
-- IBM MQ & Resource Adapter 9.3.0.0
+- Temurin-21.0.4+7
+- Jakarta EE 10.0.0
+- Apache Maven 3.9.9
+- OpenLiberty 24.0.0.12
+- IBM MQ & Resource Adapter 9.4.1.1
 
-ℹ️ For convenience I'm versioning the adapter here. But you should get your specific version from [Fix Central](https://www.ibm.com/support/fixcentral/), following guidelines such as in [this procedure](https://www.ibm.com/docs/en/ibm-mq/9.3?topic=adapter-installing-resource-in-liberty) for your particular version.
+ℹ️ For convenience I'm versioning the adapter here. But you should get your specific version from [Fix Central](https://www.ibm.com/support/fixcentral/), following guidelines such as in [this procedure](https://www.ibm.com/docs/en/ibm-mq/9.4?topic=adapter-installing-resource-in-liberty) for your particular version.
 
 ## Sources
 

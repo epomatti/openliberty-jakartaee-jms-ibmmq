@@ -18,7 +18,7 @@ public class Api {
 
   @Inject
   SampleProducer producer;
-  
+
   @POST
   @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
   @Produces(MediaType.TEXT_PLAIN)

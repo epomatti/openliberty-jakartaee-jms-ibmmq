@@ -1,0 +1,21 @@
+{
+    "version": "0.2",
+    "ignorePaths": [],
+    "dictionaryDefinitions": [],
+    "dictionaries": [],
+    "words": [
+        "allclient",
+        "ibmmq",
+        "jakartaee",
+        "jmsra",
+        "jndi",
+        "libertymq",
+        "openliberty",
+        "SVRCONN",
+        "Temurim",
+        "Temurin",
+        "wmqjmsra"
+    ],
+    "ignoreWords": [],
+    "import": []
+}
